@@ -2,17 +2,74 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title></title>
-	<!-- Formas de agregar codigo js
-		1.- Interna
-		2.- Externa (en el head)
-		3.- Externa (en el body)
-	 -->
-	<script type="text/javascript"></script>
-	<script type="text/javascript" src="Js/ficheroExterno.js"></script>
+	<title>Mi primer examen</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+	<h1>Formulario de Prueba</h1>
+	<form>
+		<label for="nombre">Nombre:</label>
+	 	<input type="text" name="nombre" placeholder="Agrega tu nombre..." size="25" minlength="2" maxlength="20" required>
+	 	<p>
+	 	<label for="nombre2">Segundo nombre:</label>
+	 	<input type="text" name="nombre2" placeholder="Agrega tu segundo nombre..." size="25" minlength="2" maxlength="20" required>
+	 	</p>
+	 	<p>
+	 	<label for="apellidoPaterno">Apellido paterno:</label>
+	 	<input type="text" name="apellidoPaterno" placeholder="Agrega tu apellido paterno..." size="25"  minlength="2" maxlength="20" required>
+	 	</p>
+	 	<p>
+	 	<label for="apellidoMaterno">Apellido materno:</label>
+	 	<input type="text" name="apellidoMaterno" placeholder="Agrega tu apellido materno..." size="25"  minlength="2" maxlength="20" required>
+		</p>
+		<p>
+	 	<label for="direccion">Direccion:</label>
+	 	<input type="text" name="direccion" placeholder="Agrega tu direccion..." size="80" minlength="2" maxlength="100" required>
+		</p>
+		<p>
+	 	<label for="correo">Correo electronico:</label>
+	 	<input type="email" name="correo" placeholder="Agrega tu correo electronico..." size="25" required="required"
+	 	pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{3,5}">
+		</p>
+		<p>
+	 	<label for="fechaNacimiento">Fecha de nacimiento:</label>
+	 	<input type="date" name="fechaNacimiento" id="fechaNacimiento" required="required">
+		</p>
+		<p>
+	 	<label for="fechaInicioTramite">Fecha de inicio de tramite:</label>
+	 	<input type="date" name="fechaInicioTramite" id="fechaInicioTramite" required="required">
+		</p>
+		<p>
+	 	<label for="fechaFinalTramite">Fecha de culminacion de tramite:</label>
+	 	<input type="date" name="fechaFinalTramite" id="fechaFinalTramite" required="required">
+		</p>
+		<input type="submit" name="enviar" id="boton">
+	</form>
+	<br>
 
-<script type="text/javascript" src="Js/ficheroExterno.js"></script>
+	<div class="btn-group">
+	  <button type="button" class="open-modal" data-open="modal1">
+	    Mostrar modal
+	  </button>
+	</div>
+
+	<div class="modal" id="modal1" data-animation="slideInOutLeft">
+	  <div class="modal-dialog">
+	    <header class="modal-header">
+	      Cabecera del modal
+	      <button class="close-modal" aria-label="close modal" data-close>
+	        ✕  
+	      </button>
+	    </header>
+	    <section class="modal-content">
+	      <p><strong>Presione ✕, ESC, o clic fuera del modal para salir</strong></p>
+	    </section>
+	    <footer class="modal-footer">
+	      Pie del modal
+	    </footer>
+	  </div>
+	</div>
+
+	<script type="text/javascript" src="js/validaciones.js"></script>
 </body>
 </html>
